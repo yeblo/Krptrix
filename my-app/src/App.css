@@ -1,0 +1,150 @@
+.header{
+  background-color: rgba(247, 237, 255, 1);
+}
+.App-logo {
+  justify-content: center !important;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+ */
+ .form {
+  /* position: relative; */
+  z-index: 1;
+  background: #28163a;
+  max-width: 835px;
+  margin: 0 auto 0px;
+  /* padding: 45px; */
+  text-align: left;
+}
+.form input {
+  font-family: "Clash Grotesk-Regular";
+  background: #28163a;
+  width: 100%;
+  border: 1px solid rgba(212, 161, 252, 1);
+  /* margin: 0 0 15px; */
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-size: 17px;
+  color: #fff
+}
+
+.form input::placeholder {
+  font-family: "Clash Grotesk-Regular";
+  font-size: 17px ;
+  color: rgba(212, 161, 252, 1);
+}
+
+.form label{
+  color: rgba(212, 161, 252, 1);
+}
+
+.form-section{
+    align-items: flex-end;
+    background-color: #28163a;
+    /* padding :50px; */
+}
+
+@font-face {
+  font-family: "Clash Grotesk-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../public/font/ClashGrotesk-Regular.otf") format("opentype");
+}
+
+.form-title{
+  color: #ff7fff;
+  font-family: "Clash Grotesk-Semibold";
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: 0;
+  /* line-height: 52px; */
+  /* min-height: 55px; */
+  text-align: center;
+  white-space: nowrap;
+}
+
+@font-face {
+  font-family: "Clash Grotesk-Semibold";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../public/font/ClashGrotesk-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Clash Grotesk-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../public/font/ClashGrotesk-Medium.otf") format("opentype");
+}
+
+.hero-heading {
+  color: rgba(136, 84, 187, 1);
+  font-family: Clash Grotesk-Semibold;
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+}
+
+.hero{
+  padding-left: 70px !important;
+  padding-right: 70px !important;
+}
+
+.hero-subheading{
+  color: rgba(63, 56, 64, 1);
+  font-family: Clash Grotesk-Medium;
+  font-size: 24 px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-align: center;
+}
+
+.hero-button{
+  background: linear-gradient(180deg, rgb(136, 84, 187) 0%, rgb(186, 103, 188) 100%);
+  border-radius: 100px;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 130px 20px 130px !important;
+  border-radius: 50px !important;
+  font-family: Clash Grotesk-Semibold;
+  line-height: 20 px;
+  text-transform: none !important;
+  font-size: 0.83em;
+}
+
+footer{
+  font-family: Clash Grotesk-Medium;
+    background-color:#170115;
+    color:rgba(247, 237, 255, 1);
+    padding: 56px 555px;
+    text-decoration: none important!
+
+}
+
+.sm-icon{
+  text-decoration: none important!;
+  color:rgba(247, 237, 255, 1);
+}
+
+.sm-icon:hover{
+  color :rgba(136, 84, 187, 1);
+}
