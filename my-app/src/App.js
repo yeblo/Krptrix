@@ -20,16 +20,16 @@ function App() {
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='hero container'>
               <h1 className='mb-3 hero-heading'>The ultimate web3 platform for <br/> resources in design and development</h1>
-              <h4 className='mb-3 hero-subheading'>Curious on how to begin your Web3 journey? Krptrix will help you <br/>create an easy roadmap to start and grow your career in web3</h4>
+              <p className='mb-3 hero-subheading'>Curious on how to begin your Web3 journey? Krptrix will help you create an easy roadmap to start and grow your career in web3</p>
               <MDBBtn tag="a" className="hero-button mt-5" href="#waitlist">Join the waitlist <MDBIcon className="px-1" fas icon="long-arrow-alt-right" /></MDBBtn>
             </div>
           </div>
         </div>
       </div>
       </header>
-      <section className='form-section p-5' id='waitlist'>
+      <section className='form-section py-5' id='waitlist'>
 
-        <MDBContainer className='p-5'>
+        <MDBContainer className='py-5'>
         <h3 className="text-center form-title mb-3">Get Notified when we launch!</h3>
         <form className='form'>
 
