@@ -9,11 +9,14 @@
 @media (max-width: 480px) {
   .bg-image{
     background-image: url('../public/hero_section.png');
-    height: 1200px !important;
+    height: 900px !important;
   }
   .hero-button{
     width: 100% !important;
 
+  }
+  .hero-heading {
+    font-size: 8vw!important;
   }
 }
 .bg-image{
@@ -119,10 +122,10 @@
   text-align: center;
 }
 
-.hero{
+/* .hero{
   padding-left: 70px !important;
   padding-right: 70px !important;
-}
+} */
 
 .hero-subheading{
   color: rgba(63, 56, 64, 1);

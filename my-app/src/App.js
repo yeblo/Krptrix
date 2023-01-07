@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './nav';
+// import NavBar from './nav';
 import { MDBBtn,MDBContainer,MDBIcon } from 'mdb-react-ui-kit';
 import './App.css';
 import krptrix_logo from './krptrix_logo.svg';
