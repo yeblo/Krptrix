@@ -5,6 +5,18 @@
   justify-content: center !important;
 }
 
+
+@media (max-width: 600px) {
+  .bg-image{
+    background-image: "url('hero_section.png')";
+    height: 1200px !important;
+  }
+}
+.bg-image{
+  background-image: "url('hero_section.png')";
+  height: 950px;
+}
+
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -70,13 +82,13 @@
 .form-title{
   color: #ff7fff;
   font-family: "Clash Grotesk-Semibold";
-  font-size: 45px;
+  font-size: 2.34em;
   font-weight: 400;
   letter-spacing: 0;
   /* line-height: 52px; */
   /* min-height: 55px; */
   text-align: center;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 @font-face {
@@ -119,6 +131,7 @@
 }
 
 .hero-button{
+  display: block;
   background: linear-gradient(180deg, rgb(136, 84, 187) 0%, rgb(186, 103, 188) 100%);
   border-radius: 100px;
   text-align: center;

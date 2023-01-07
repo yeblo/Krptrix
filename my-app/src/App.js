@@ -11,7 +11,7 @@ function App() {
       <header className='header' style={{height: '100%' }}>
       
        
-       <div className='p-5 text-center bg-image' style={{ backgroundImage: "url('hero_section.png')", height: '950px' }}>
+       <div className='p-5 text-center bg-image'>
         
        <div className='App-logo text-center'>
               <img src= {krptrix_logo}alt=''/>
