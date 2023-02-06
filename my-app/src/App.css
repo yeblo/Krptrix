@@ -18,6 +18,10 @@
   .hero-heading {
     font-size: 8vw!important;
   }
+  .bg-image{
+    background-image: url('../public/hero_section.png');
+    height: 400px;
+  }
 }
 .bg-image{
   background-image: url('../public/hero_section.png');
@@ -45,20 +49,29 @@
   /* position: relative; */
   z-index: 1;
   background: #28163a;
-  max-width: 835px;
+  max-width: 700px;
   margin: 0 auto 0px;
   /* padding: 45px; */
   text-align: left;
 }
+
+.form-label{
+  color: #E6C9FD !important;
+  font-size: 1.25em;
+  line-height: 32px;
+  font-family: Clash Grotesk-Regular;
+  letter-spacing: 0.02em
+}
+
 .form input {
   font-family: "Clash Grotesk-Regular";
   background: #28163a;
   width: 100%;
-  border: 1px solid rgba(212, 161, 252, 1);
-  /* margin: 0 0 15px; */
+  height: 85px;
+  border: 1px solid #8854BB;
   padding: 15px;
   box-sizing: border-box;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 17px;
   color: #fff
 }
@@ -66,12 +79,11 @@
 .form input::placeholder {
   font-family: "Clash Grotesk-Regular";
   font-size: 17px ;
-  color: rgba(212, 161, 252, 1);
+  color:#8854BB;
+  padding-left: 10px;
 }
 
-.form label{
-  color: rgba(212, 161, 252, 1);
-}
+
 
 .form-section{
     align-items: flex-end;
@@ -87,12 +99,12 @@
 }
 
 .form-title{
-  color: #ff7fff;
+  color: #FBF6FF;
   font-family: "Clash Grotesk-Semibold";
   font-size: 2.34em;
   font-weight: 400;
   letter-spacing: 0;
-  /* line-height: 52px; */
+  line-height: 52px;
   /* min-height: 55px; */
   text-align: center;
   /* white-space: nowrap; */
@@ -113,7 +125,7 @@
 }
 
 .hero-heading {
-  color: rgba(136, 84, 187, 1);
+  color: #38046B;
   font-family: Clash Grotesk-Semibold;
   font-size: 45px;
   font-weight: 400;
@@ -130,31 +142,33 @@
 .hero-subheading{
   color: rgba(63, 56, 64, 1);
   font-family: Clash Grotesk-Medium;
-  font-size: 24 px;
+  font-size: 1.25em;
   font-weight: 500;
-  letter-spacing: 0;
-  line-height: 32px;
+  letter-spacing: 0.25px;
+  line-height: 160%;
   text-align: center;
 }
 
 .hero-button{
   display: block;
-  background: linear-gradient(180deg, rgb(136, 84, 187) 0%, rgb(186, 103, 188) 100%);
+  background: #B07CE3 !important; 
   border-radius: 100px;
   text-align: center;
   justify-content: center;
-  width: 40%;
-  padding: 20px 0px 20px 0px !important; 
+  width: 30%;
+  padding: 22px 0px 22px 0px !important; 
   border-radius: 30px !important;
-  font-family: Clash Grotesk-Semibold;
+  font-family: Clash Grotesk-Regular;
   line-height: 20 px;
   text-transform: none !important;
-  font-size: 0.83em;
+  font-size: 1.25em;
   cursor: pointer;
+  box-shadow: none !important;
+  letter-spacing: 0.1em;
 }
 
 footer{
-  font-family: Clash Grotesk-Medium;
+  font-family: Clash Grotesk-Regular;
     background-color:#170115;
     color:rgba(247, 237, 255, 1);
     padding: 56px 555px;
@@ -169,4 +183,18 @@ footer{
 
 .sm-icon:hover{
   color :rgba(136, 84, 187, 1);
+}
+
+
+.footer-hr{
+  border: 0px solid #170115 !important;
+  color: #170115;
+}
+
+.for-copywrite{
+  font-size: 0.875em;
+  font-family: Clash Grotesk-Regular;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  color: #B8B5B8;
 }
