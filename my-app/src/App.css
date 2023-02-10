@@ -9,7 +9,7 @@
 @media (max-width: 480px) {
   .bg-image{
     background-image: url('../public/hero_section.png');
-    height: 900px !important;
+    height: 200vw !important;
   }
   .hero-button{
     width: 100% !important;
@@ -18,14 +18,14 @@
   .hero-heading {
     font-size: 8vw!important;
   }
-  .bg-image{
+  /* .bg-image{
     background-image: url('../public/hero_section.png');
     height: 400px;
-  }
+  } */
 }
 .bg-image{
   background-image: url('../public/hero_section.png');
-  height: 900px;
+  height: 800px;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
