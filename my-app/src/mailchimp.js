@@ -56,16 +56,12 @@ const CustomForm = ({ status, message, onValidated }) => {
                 <div className="mc__field-container"> </div>
             ) : null}
 
-            {/* 
-             implement modal here
+            
+             {/* implement modal here
             {
                 status === 'success' ? <button
                     // onClick={() => setModalOpen(false)}
-                    className="g__justify-self-center">Close</button> : <InputField
-                    label="subscribe"
-                    type="submit"
-                    formValues={[email, fullName]}
-                />
+                    className="g__justify-self-center">Close</button> : " "
             } */}
 
             <div className='form-group mb-4'>
@@ -91,10 +87,10 @@ const CustomForm = ({ status, message, onValidated }) => {
             </div>
 
             <InputField
-                className=""
                 label="Join the waitlist &#x2192;"
                 type="submit"
                 formValues={[email, fullName]}
+                status
             />
         </form>
     );

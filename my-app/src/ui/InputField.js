@@ -11,7 +11,7 @@ const InputField = (props) => {
     if (props.type === "submit") {
         return (
             <input
-                className='button hero-button mt-5'
+                className='button hero-button-submit mt-5'
                 type='submit'
                 value={props.label}
                 disabled={validateInput(props.formValues)}
