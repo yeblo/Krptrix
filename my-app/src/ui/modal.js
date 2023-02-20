@@ -1,32 +1,47 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {
+    MDBBtn,
+    MDBModal,
+    MDBModalDialog,
+    MDBModalContent,
+    MDBModalBody,
+    MDBModalFooter,
+    MDBModalHeader
+} from 'mdb-react-ui-kit';
+import greencheckmark from '../greencheckmark.png';
 
-function Modal() {
-    const [modal, setModal] = useState(false)
-
-    const toggleModal= ()=>{
-        setModal(!modal)
-    }
-  return (
-   <>
-        <button onClick={toggleModal} className="btn-modal">
-            Open
-        </button>
-        <div className='modal'>
-            <div onClick={toggleModal} className='overlay'></div>
-            <div className='modal-content'>
-                <h2>Yaay, you're on the Waitlist!</h2>
-                <p>
-                    congratulations! we have added your email to our waitlist
-                    this means you are one of the first people in the world who will 
-                    get access to Krptrix once we launch on Beta
-                </p>
-
-                <button className='' onClick={toggleModal}>CLOSE</button>
-            </div>
-        </div>
-   </>
-
-  )
+function Modal(props) {
+    return (
+        <>
+            <MDBModal show={props.show} setShow= {props.onClose} tabIndex='-1'>
+                <MDBModalDialog>
+                    <MDBModalContent>
+                        <MDBModalHeader>
+                            <MDBBtn className='btn-close' color='none' onClick={props.hide}></MDBBtn>
+                        </MDBModalHeader>
+                        <MDBModalBody className='text-center for-confetti'>
+                        {props.status === "Success" ?  <div><img src={greencheckmark} alt='' height={70} /> </div>: ""}
+                        {props.status === "success" && (<div><img src={greencheckmark} alt='' height={70} /> </div>)}
+                        <div>{props.status}</div>
+                        <>{props.modalText}</>    
+                        </MDBModalBody>
+                        <MDBModalFooter>
+                            <MDBBtn color='secondary' onClick={props.hide}>
+                                Close
+                            </MDBBtn>
+                        </MDBModalFooter>
+                    </MDBModalContent>
+                </MDBModalDialog>
+            </MDBModal>
+        </>
+    )
 }
+export default Modal;
 
-export default Modal
+// {props.modalText = "Success" ?    
+// <div className='text-center for-confetti'>
+    
+//     <div>Success</div>
+//     <div>{props.modalText}</div>
+// </div>:
+// <div>{props.modalText}</div>}

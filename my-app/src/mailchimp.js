@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
-// import './mcFormStyles.scss';
+import Modal from './ui/modal';
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import InputField from './ui/InputField';
-
 const CustomForm = ({ status, message, onValidated }) => {
     const [email, setEmail] = useState('');
     const [fullName, setFullName] = useState('');
+    const [showModal, setShowModal] = useState(false);
+
+    const toggleModal = ()=> {
+        setShowModal(!showModal);
+      }
+        
 
     useEffect(() => {
-        if(status === "success") clearFields();
+        if(status === "success"){
+            clearFields();
+        } 
       }, [status])
     
       const clearFields = () => {
@@ -28,30 +35,32 @@ const CustomForm = ({ status, message, onValidated }) => {
     }
 
     return (
+        <>
         <form className="form" onSubmit={(e) => handleSubmit(e)}>
-            <h3 className="mc__title"> {status === "success"
+            {/* <h3 className="mc__title"> {status === "success"
                 ? "Success!"
                 : ""
-            }</h3>
+            }</h3> */}
 
             {status === "sending" && (
                 <div className="mc__alert mc__alert--sending">
                     sending...
                 </div>
             )}
-            {status === "error" && (
+            {/* {status === "error" && (
                 <div
                     className="mc__alert mc__alert--error"
                     dangerouslySetInnerHTML={{ __html: message }}
                 />
-            )}
-            {status === "success" && (
-                <div
-                    className="mc__alert mc__alert--success"
-                    dangerouslySetInnerHTML={{ __html: message }}
-                />
-            )}
-
+            )} */}
+            {/* {status === "success" && (
+                // <div
+                //     className="mc__alert mc__alert--success"
+                //     dangerouslySetInnerHTML={{ __html: message }}
+                // />
+                
+            )} 
+            */}
             {status !== "success" ? (
                 <div className="mc__field-container"> </div>
             ) : null}
@@ -59,9 +68,12 @@ const CustomForm = ({ status, message, onValidated }) => {
             
              {/* implement modal here
             {
-                status === 'success' ? <button
-                    // onClick={() => setModalOpen(false)}
-                    className="g__justify-self-center">Close</button> : " "
+                status === 'success' ? toggleModal()
+            
+                // <button
+                //     // onClick={() => setModalOpen(false)}
+                //     className="g__justify-self-center">Close</button> 
+                    : " "
             } */}
 
             <div className='form-group mb-4'>
@@ -90,9 +102,12 @@ const CustomForm = ({ status, message, onValidated }) => {
                 label="Join the waitlist &#x2192;"
                 type="submit"
                 formValues={[email, fullName]}
+                onClick = {toggleModal}
                 status
             />
-        </form>
+        </form>  
+        <Modal show={showModal} onClose = {setShowModal} modalText = {message} status = {status} hide= {toggleModal}/>
+         </> 
     );
 };
 

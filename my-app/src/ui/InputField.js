@@ -1,5 +1,4 @@
 import React from 'react'
-
 const InputField = (props) => {
     const validateInput = values => {
         if (values.some(f => f === "") || values[0].indexOf("@") === -1) {
@@ -12,6 +11,7 @@ const InputField = (props) => {
         return (
             <input
                 className='button hero-button-submit mt-5'
+                onClick={props.onClick}
                 type='submit'
                 value={props.label}
                 disabled={validateInput(props.formValues)}

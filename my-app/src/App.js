@@ -1,41 +1,15 @@
-import React, { useEffect, useState} from 'react';
-// import NavBar from './nav';
+import React from 'react';
 import { MDBBtn, MDBContainer, MDBIcon } from 'mdb-react-ui-kit';
 import './App.css';
 import krptrix_logo from './krptrix_logo.png';
 import krptrix_logo_footer from './krptrix_logo_footer.svg';
 import right_arrow from './right_arrow.svg';
 import MailchimpFormContainer from './mailchimp';
-function App({ status, message, onValidated }) {
-  const [email, setEmail] = useState('');
-  const [fullName, setFullName] = useState('');
-
-  useEffect(() => {
-    if (status === "success") clearFields();
-  }, [status])
-
-  const clearFields = () => {
-    setFullName('');
-    setEmail('');
-  }
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    email &&
-      fullName &&
-      email.indexOf("@") > -1 &&
-      onValidated({
-        EMAIL: email,
-        MERGE1: fullName
-      });
-  }
-
+function App(){
   return (
     <React.Fragment>
       <header className='header' style={{ height: '100%' }}>
-
-
         <div className='p-5 text-center bg-image'>
-
           <div className='App-logo text-center'>
             <img src={krptrix_logo} alt='' />
           </div>
@@ -72,7 +46,7 @@ function App({ status, message, onValidated }) {
             <a className='sm-icon' href="#"><MDBIcon className="mx-3" fab icon="facebook-f" /></a>
             <a className='sm-icon' href="https://www.instagram.com/krptrix/"><MDBIcon className="mx-3" fab icon="instagram" /></a>
             <a className='sm-icon' href="https://twitter.com/krptrix"><MDBIcon className="mx-3" fab icon="twitter" /></a>
-            <a className='sm-icon' tag="a" href="#" ><MDBIcon className="mx-3" fab icon="linkedin-in" /></a>
+            <ay className='sm-icon' tag="a" href="#" ><MDBIcon className="mx-3" fab icon="linkedin-in" /></ay>
           </div>
           <hr className="footer-hr" />
           <p className='for-copywrite'>Copyright © 2022, Krptrix | All rights reserved.</p>
